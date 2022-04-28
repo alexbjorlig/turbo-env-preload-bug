@@ -7,12 +7,13 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "node -r dotenv/config ./node_modules/.bin/turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "dotenv": "^16.0.0",
     "prettier": "latest",
     "turbo": "latest"
   },
